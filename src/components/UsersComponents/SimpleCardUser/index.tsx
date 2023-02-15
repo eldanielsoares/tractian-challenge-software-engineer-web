@@ -2,6 +2,7 @@ import { User } from "@/@core/usecases/users/domain/entities/user";
 import { Card, CardBody, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { NameIcon } from "../../SharedComponents/NameIcon";
+import { ModalUpdateUser } from "../ModalUpdateUser";
 
 interface IUserProps {
   user: User;
@@ -10,12 +11,7 @@ interface IUserProps {
 
 export const SimpleCardUser: React.FC<IUserProps> = ({ user, onClick }) => {
   return (
-    <Card
-      maxW={["256px", "200px"]}
-      minH={"185px"}
-      onClick={onClick}
-      cursor="pointer"
-    >
+    <Card maxW={["256px", "200px"]} minH={"185px"} cursor="pointer">
       <CardBody
         py={4}
         px={4}
@@ -24,8 +20,9 @@ export const SimpleCardUser: React.FC<IUserProps> = ({ user, onClick }) => {
         alignItems="center"
         justifyContent={"center"}
       >
-        <NameIcon name={user.name} />
-        <Stack spacing="1" p={3}>
+        <ModalUpdateUser user={user} />
+        <Stack spacing={3} alignItems="center" onClick={onClick}>
+          <NameIcon name={user.name} />
           <Text fontSize="lg" fontWeight={"bold"} textAlign="center">
             {user.name}
           </Text>

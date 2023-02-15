@@ -7,6 +7,8 @@ import { SimpleCard } from "@/components/CompanyComponents/SimpleCard";
 import { useOverview } from "@/context/OverviewContext";
 import { Flex, Heading, Text } from "@chakra-ui/react";
 import { GetServerSideProps, NextPage } from "next";
+import { ModalAddAsset } from "@/components/CompanyComponents/ModalAddAsset";
+import { ModalUpdateCompany } from "@/components/CompanyComponents/ModalUpdateCompany";
 
 interface ICompanyProps {
   company: CompanyData;
@@ -41,9 +43,14 @@ const Company: NextPage<ICompanyProps> = ({ company }) => {
     <>
       <Header />
       <Flex maxW={1480} px={8} mx="auto" direction={"column"}>
-        <Heading color="#214DB6" mt={6} fontWeight="semibold">
-          Informações da empresa
-        </Heading>
+        <Flex gap={4} alignItems="center">
+          <Heading color="#214DB6" mt={6} fontWeight="semibold">
+            Informações da empresa
+          </Heading>
+          <ModalUpdateCompany
+            name={overview.companies && overview.companies[0].name}
+          />
+        </Flex>
 
         <Text fontSize={"2xl"} color="#222" mt={6} fontWeight="semibold">
           Unidades
@@ -64,6 +71,7 @@ const Company: NextPage<ICompanyProps> = ({ company }) => {
           <SimpleCard
             title={"Total de máquinas"}
             value={countAssets.toString()}
+            modal={<ModalAddAsset />}
           />
 
           <SimpleCard

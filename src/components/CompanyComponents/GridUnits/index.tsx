@@ -2,6 +2,7 @@ import React from "react";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { IUnits } from "@/@core/usecases/overview/domain/models/overview.models";
 import { SimpleCardUnit } from "../SimpleCardUnit";
+import { ModalEditAddUnit } from "../ModalEditAddUnit";
 
 interface IUnitsProps {
   units: IUnits[];
@@ -28,6 +29,9 @@ export const GridUnits: React.FC<IUnitsProps> = ({ units = [] }) => {
           <SimpleCardUnit unit={unit} />
         </GridItem>
       ))}
+      <GridItem w="100%" minW={"130px"}>
+        <ModalEditAddUnit />
+      </GridItem>
     </Grid>
   );
 };

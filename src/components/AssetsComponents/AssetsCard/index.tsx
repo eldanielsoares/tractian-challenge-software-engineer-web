@@ -24,7 +24,7 @@ export const AssetsCard: React.FC<AssetsCardProps> = ({
 
   return (
     <Card
-      maxW={["256px", "300px"]}
+      maxW={"300px"}
       p={0}
       minH={"300px"}
       onClick={onClick}

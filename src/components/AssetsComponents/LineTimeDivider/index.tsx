@@ -3,8 +3,13 @@ import React from "react";
 
 export const LineTimeDivider: React.FC = () => {
   return (
-    <Flex alignItems={"center"} maxW={"fit-content"}>
-      <Flex w={"95px"} h={"1px"} bg={"#d9d9d9"} />
+    <Flex
+      alignItems={"center"}
+      maxW={"fit-content"}
+      flexDirection={["column", "row"]}
+      alignSelf={"center"}
+    >
+      <Flex w={["1px", "95px"]} h={["32px", "1px"]} bg={"#d9d9d9"} />
       <Box
         borderRadius="full"
         borderWidth={"2px"}

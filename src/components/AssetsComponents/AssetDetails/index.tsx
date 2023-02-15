@@ -58,7 +58,7 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
               textAlign={["center", "left"]}
             >
               <GridItem minW={"120px"}>
-                <Text fontSize={"md"}>
+                <Text fontSize={["2xl", "lg"]}>
                   Modelo:
                   <br />
                   <Text as={"span"} fontWeight="semibold">
@@ -68,7 +68,7 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
               </GridItem>
 
               <GridItem minW={"120px"}>
-                <Text fontSize={"md"}>
+                <Text fontSize={["2xl", "lg"]}>
                   Sensor: <br />
                   <Text as={"span"} fontWeight="semibold">
                     {asset.sensors.join()}
@@ -77,7 +77,7 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
               </GridItem>
 
               <GridItem minW={"120px"}>
-                <Text fontSize={"md"}>
+                <Text fontSize={["2xl", "lg"]}>
                   Saúde da máquina: <br />
                   <Text as={"span"} fontWeight="semibold">
                     {asset.healthscore}%
@@ -87,7 +87,7 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
 
               {asset.specifications.maxTemp && (
                 <GridItem minW={"120px"}>
-                  <Text fontSize={"md"}>
+                  <Text fontSize={["2xl", "lg"]}>
                     Temperatura max: <br />
                     <Text as={"span"} fontWeight="semibold">
                       {asset.specifications.maxTemp + "°" || "-"}
@@ -98,7 +98,7 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
 
               {asset.specifications.power && (
                 <GridItem minW={"120px"}>
-                  <Text fontSize={"md"}>
+                  <Text fontSize={["2xl", "lg"]}>
                     Potência: <br />
                     <Text as={"span"} fontWeight="semibold">
                       {asset.specifications.power || "-"}
@@ -109,7 +109,7 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
 
               {asset.specifications.rpm && (
                 <GridItem minW={"120px"}>
-                  <Text fontSize={"md"}>
+                  <Text fontSize={["2xl", "lg"]}>
                     RPM: <br />
                     <Text as={"span"} fontWeight="semibold">
                       {asset.specifications.rpm || "-"}
@@ -119,7 +119,7 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
               )}
 
               <GridItem minW={"120px"}>
-                <Text fontSize={"md"}>
+                <Text fontSize={["2xl", "lg"]}>
                   Total de coletas: <br />
                   <Text as={"span"} fontWeight="semibold">
                     {asset.metrics.totalCollectsUptime.toString()}
@@ -128,7 +128,7 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
               </GridItem>
 
               <GridItem minW={"120px"}>
-                <Text fontSize={"md"}>
+                <Text fontSize={["2xl", "lg"]}>
                   Total de horas coletadas: <br />
                   <Text as={"span"} fontWeight="semibold">
                     {parseInt(asset.metrics.totalUptime.toString()).toFixed(2)}
@@ -137,7 +137,7 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
               </GridItem>
 
               <GridItem minW={"120px"}>
-                <Text fontSize={"md"}>
+                <Text fontSize={["2xl", "lg"]}>
                   Última coleta: <br />
                   <Text as={"span"} fontWeight="semibold">
                     {format(
@@ -149,7 +149,7 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
               </GridItem>
 
               <GridItem minW={"120px"}>
-                <Text fontSize={"md"}>
+                <Text fontSize={["2xl", "lg"]}>
                   Status: <br />
                   <Text as={"span"} fontWeight="semibold">
                     {dictionary(asset.status)}
@@ -158,7 +158,7 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
               </GridItem>
 
               <GridItem minW={"120px"}>
-                <Text fontSize={"md"}>
+                <Text fontSize={["2xl", "lg"]}>
                   Unidade: <br />
                   <Text as={"span"} fontWeight="semibold">
                     {unit}

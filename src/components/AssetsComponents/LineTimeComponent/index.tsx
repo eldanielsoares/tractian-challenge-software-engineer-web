@@ -41,10 +41,10 @@ export const LineTimeComponent: React.FC<LineTimeComponentProps> = ({
           {healthHistory.map((hh, key) => (
             <GridItem
               display={"flex"}
-              flexDirection={"row"}
+              flexDirection={["column", "row"]}
               key={key}
               my={4}
-              maxW={"180px"}
+              maxW={["100%", "180px"]}
             >
               <Stack spacing={0} maxW={"100%"}>
                 <Text

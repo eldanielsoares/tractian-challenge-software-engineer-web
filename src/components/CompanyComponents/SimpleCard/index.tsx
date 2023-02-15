@@ -1,19 +1,19 @@
-import { Card, CardBody, Text } from "@chakra-ui/react";
+import { Card, CardBody, CardFooter, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 
 interface SimpleCardProps {
   title: string;
   value: string;
-  onClick?: () => void;
+  modal?: JSX.Element;
 }
 
 export const SimpleCard: React.FC<SimpleCardProps> = ({
   title,
   value,
-  onClick = () => {},
+  modal,
 }) => {
   return (
-    <Card w={["256px", "400px"]} onClick={onClick}>
+    <Card w={["256px", "400px"]}>
       <CardBody
         py={8}
         px={4}
@@ -38,6 +38,7 @@ export const SimpleCard: React.FC<SimpleCardProps> = ({
         >
           {value}
         </Text>
+        {modal}
       </CardBody>
     </Card>
   );
