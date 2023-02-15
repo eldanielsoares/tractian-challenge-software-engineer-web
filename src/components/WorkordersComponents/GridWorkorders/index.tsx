@@ -23,17 +23,6 @@ export const GridWorkorders: React.FC<GridWorkOrdersProps> = ({
     return findAsset;
   };
 
-  const getUsers = (assignedIds: number[]) => {
-    let users: IUser[] = [];
-
-    assignedIds.map((id) => {
-      const find = overview.users && overview.users.find((i) => i.id === id);
-      if (find) users.push(find);
-    });
-
-    return users;
-  };
-
   return (
     <Grid
       templateColumns={[
@@ -55,7 +44,6 @@ export const GridWorkorders: React.FC<GridWorkOrdersProps> = ({
             workorders={wo || []}
             image={getAsset(wo.id)?.image || ""}
             name={getAsset(wo.id)?.name || ""}
-            users={getUsers(wo.assignedUserIds)}
           />
         </GridItem>
       ))}
