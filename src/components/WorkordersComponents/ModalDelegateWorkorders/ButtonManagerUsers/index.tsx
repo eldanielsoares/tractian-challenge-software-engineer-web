@@ -1,6 +1,6 @@
+import React from "react";
 import { useOverview } from "@/context/OverviewContext";
 import { Card, CardBody, Icon, Text } from "@chakra-ui/react";
-import React from "react";
 import { FiPlus, FiTrash2 } from "react-icons/fi";
 
 interface Props {

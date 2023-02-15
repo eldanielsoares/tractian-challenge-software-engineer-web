@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import {
   Button,
   Icon,
@@ -11,7 +12,6 @@ import {
   ModalOverlay,
   useDisclosure,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
 import { FiEdit } from "react-icons/fi";
 
 interface Props {

@@ -1,3 +1,4 @@
+import React from "react";
 import { Assets } from "@/@core/usecases/assets/domain/entities/assets";
 import { colors } from "@/utils/colors.obj";
 import { dictionary } from "@/utils/dictionary";
@@ -12,7 +13,6 @@ import {
   GridItem,
 } from "@chakra-ui/react";
 import { format } from "date-fns";
-import React from "react";
 
 interface AssetDetailsProps {
   asset: Assets;

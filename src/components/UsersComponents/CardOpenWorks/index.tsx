@@ -1,8 +1,8 @@
-import { IWorkOrdersOverview } from "@/@core/usecases/overview/domain/models/overview.models";
+import React from "react";
 import { colors } from "@/utils/colors.obj";
 import { dictionary } from "@/utils/dictionary";
+import { IWorkOrdersOverview } from "@/@core/usecases/overview/domain/models/overview.models";
 import { Card, CardBody, Image, Stack, Text } from "@chakra-ui/react";
-import React from "react";
 
 interface CardOpenWork {
   workopen: IWorkOrdersOverview;

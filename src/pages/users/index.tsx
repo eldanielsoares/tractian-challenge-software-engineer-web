@@ -1,12 +1,12 @@
+import { useState } from "react";
+import { Flex, Heading, Input, Text } from "@chakra-ui/react";
+import { GetServerSideProps, NextPage } from "next";
 import { container, Registry } from "@/@core/shared/container-registry";
 import { ListUserUsecase } from "@/@core/usecases/users/application/list-user";
 import { User } from "@/@core/usecases/users/domain/entities/user";
 import { EmptyList } from "@/components/SharedComponents/EmptyList";
 import { Header } from "@/components/SharedComponents/Header";
 import { GridUsers } from "@/components/UsersComponents/GridUsers";
-import { Flex, Heading, Input, Text } from "@chakra-ui/react";
-import { GetServerSideProps, NextPage } from "next";
-import { useState } from "react";
 
 interface IUsersProps {
   users: User[];

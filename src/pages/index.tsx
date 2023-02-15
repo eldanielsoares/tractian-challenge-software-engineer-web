@@ -1,11 +1,11 @@
+import { Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
+import { useRouter } from "next/router";
+import { Header } from "@/components/SharedComponents/Header";
 import { OverviewCardCompany } from "@/components/OverviewComponents/OverviewCardCompany";
 import { OverviewColumnChartComponent } from "@/components/OverviewComponents/OverviewColumnChart";
 import { OverviewPieChartComponent } from "@/components/OverviewComponents/OverviewPieChartComponent";
 import { OverviewTeam } from "@/components/OverviewComponents/OverviewTeam";
-import { Header } from "@/components/SharedComponents/Header";
 import { useOverview } from "@/context/OverviewContext";
-import { Flex, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
-import { useRouter } from "next/router";
 
 export default function Home() {
   const { push } = useRouter();

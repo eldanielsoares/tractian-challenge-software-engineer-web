@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   Button,
   Modal,
@@ -10,7 +11,6 @@ import {
   ModalFooter,
   useDisclosure,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
 
 export const ModalAddAsset: React.FC = () => {
   const [name, setName] = useState("");

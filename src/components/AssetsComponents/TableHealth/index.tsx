@@ -1,6 +1,6 @@
+import React from "react";
 import { formatDateToString } from "@/utils/formatDate";
 import {
-  Box,
   Table,
   Tbody,
   Td,
@@ -8,11 +8,9 @@ import {
   Thead,
   Tr,
   Text,
-  Button,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { parseISO } from "date-fns";
-import React from "react";
 
 interface Data {
   value: number;

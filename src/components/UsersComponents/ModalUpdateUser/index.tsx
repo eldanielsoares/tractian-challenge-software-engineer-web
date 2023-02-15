@@ -1,4 +1,6 @@
+import React, { useEffect, useState } from "react";
 import { IUser } from "@/@core/usecases/users/domain/models/users.model";
+import { FiEdit } from "react-icons/fi";
 import { useOverview } from "@/context/OverviewContext";
 import {
   Button,
@@ -14,8 +16,6 @@ import {
   Select,
   useDisclosure,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
-import { FiEdit } from "react-icons/fi";
 
 interface Props {
   user: IUser;

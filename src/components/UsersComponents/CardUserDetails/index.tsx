@@ -1,3 +1,4 @@
+import React from "react";
 import { User } from "@/@core/usecases/users/domain/entities/user";
 import {
   Card,
@@ -7,7 +8,6 @@ import {
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
-import React from "react";
 import { NameIcon } from "../../SharedComponents/NameIcon";
 
 interface IUserProps {

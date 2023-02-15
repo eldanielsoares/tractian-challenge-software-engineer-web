@@ -1,5 +1,5 @@
-import { Flex, Icon, Stack, Text } from "@chakra-ui/react";
 import React from "react";
+import { Flex, Icon, Stack, Text } from "@chakra-ui/react";
 import { FiBriefcase } from "react-icons/fi";
 
 interface OverviewTeamItemProps {

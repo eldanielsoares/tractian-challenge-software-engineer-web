@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { NameIcon } from "@/components/SharedComponents/NameIcon";
 import {
   Button,
@@ -16,7 +17,6 @@ import {
   useDisclosure,
   Text,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
 import { FiEdit } from "react-icons/fi";
 
 interface Props {

@@ -1,18 +1,24 @@
 import 'reflect-metadata';
 import http from './infra/http';
-import { WorkordersUsecase } from './../usecases/workorders/application/list-workorders-usecase';
-import { WorkOrdersHttpGateways } from './../usecases/workorders/infra/gateways/workorders-http.gateways';
-import { UserHttpGateway } from './../usecases/users/infra/gateways/user-http.gateway';
 import { Container } from 'inversify';
-import { AssetByIdUsecase } from '../usecases/assets/application/assetById-usecase';
-import { ListAssetsUsecase } from '../usecases/assets/application/list-assets-usecase';
-import { AssetsHttpGateway } from '../usecases/assets/infra/gateways/assets-http.gateway';
-import { ListUserUsecase } from '../usecases/users/application/list-user';
-import { UserByIdUsecase } from '../usecases/users/application/userById';
-import { CompanyHttpGateway } from '../usecases/company/infra/gateways/company-http.gateway';
-import { CompanyByIdUsecase } from '../usecases/company/application/companyById-usecase';
+
 import { OverviewHttpGateway } from '../usecases/overview/infra/gateways/overview-http.gateway';
 import { OverviewUsecase } from '../usecases/overview/application/overview-usecase';
+
+import { AssetsHttpGateway } from '../usecases/assets/infra/gateways/assets-http.gateway';
+import { ListAssetsUsecase } from '../usecases/assets/application/list-assets-usecase';
+import { AssetByIdUsecase } from '../usecases/assets/application/assetById-usecase';
+
+
+import { WorkOrdersHttpGateways } from './../usecases/workorders/infra/gateways/workorders-http.gateways';
+import { WorkordersUsecase } from './../usecases/workorders/application/list-workorders-usecase';
+
+import { UserHttpGateway } from './../usecases/users/infra/gateways/user-http.gateway';
+import { ListUserUsecase } from '../usecases/users/application/list-user';
+import { UserByIdUsecase } from '../usecases/users/application/userById';
+
+import { CompanyHttpGateway } from '../usecases/company/infra/gateways/company-http.gateway';
+import { CompanyByIdUsecase } from '../usecases/company/application/companyById-usecase';
 
 export const container = new Container();
 

@@ -1,16 +1,16 @@
-import { container, Registry } from "@/@core/shared/container-registry";
-import { AssetByIdUsecase } from "@/@core/usecases/assets/application/assetById-usecase";
-import { Assets } from "@/@core/usecases/assets/domain/entities/assets";
-import { IUnits } from "@/@core/usecases/overview/domain/models/overview.models";
-import { AssetDetails } from "@/components/AssetsComponents/AssetDetails";
-import { Header } from "@/components/SharedComponents/Header";
-import { LineTimeComponent } from "@/components/AssetsComponents/LineTimeComponent";
-import { useOverview } from "@/context/OverviewContext";
 import { Flex } from "@chakra-ui/react";
+import { container, Registry } from "@/@core/shared/container-registry";
 import { GetServerSideProps, NextPage } from "next";
+import { Header } from "@/components/SharedComponents/Header";
+import { AssetByIdUsecase } from "@/@core/usecases/assets/application/assetById-usecase";
+import { IUnits } from "@/@core/usecases/overview/domain/models/overview.models";
+import { Assets } from "@/@core/usecases/assets/domain/entities/assets";
+import { useOverview } from "@/context/OverviewContext";
+import { AssetDetails } from "@/components/AssetsComponents/AssetDetails";
+import { LineTimeComponent } from "@/components/AssetsComponents/LineTimeComponent";
 import LineChartComponent from "@/components/AssetsComponents/LineChartComponent";
-import { health, temperature } from "../../../mock/fake.data";
 import { TableHealth } from "@/components/AssetsComponents/TableHealth";
+import { health, temperature } from "../../../mock/fake.data";
 
 interface IAssets {
   asset: Assets;

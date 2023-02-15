@@ -1,6 +1,6 @@
+import React, { Fragment } from "react";
 import { IUser } from "@/@core/usecases/users/domain/models/users.model";
 import { Button, Card, CardBody, Divider, Stack, Text } from "@chakra-ui/react";
-import React, { Fragment } from "react";
 import { OverviewTeamItem } from "../OverviewTeamItem";
 
 interface OverviewTeamProps {

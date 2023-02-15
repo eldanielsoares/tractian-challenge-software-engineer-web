@@ -1,7 +1,7 @@
+import React from "react";
 import { IAssets } from "@/@core/usecases/assets/domain/models/assets.model";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import React from "react";
 import { AssetsCard } from "../AssetsCard";
 
 interface GridProps {

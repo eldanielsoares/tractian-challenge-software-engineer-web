@@ -1,9 +1,7 @@
-import { IUnits } from "@/@core/usecases/overview/domain/models/overview.models";
-import { User } from "@/@core/usecases/users/domain/entities/user";
-import { NameIcon } from "@/components/SharedComponents/NameIcon";
-import { Card, CardBody, Icon, Stack, Text } from "@chakra-ui/react";
 import React from "react";
-import { FiEdit } from "react-icons/fi";
+import { IUnits } from "@/@core/usecases/overview/domain/models/overview.models";
+import { NameIcon } from "@/components/SharedComponents/NameIcon";
+import { Card, CardBody, Stack, Text } from "@chakra-ui/react";
 import { ModalEditAddUnit } from "../ModalEditAddUnit";
 
 interface IUnitsProps {

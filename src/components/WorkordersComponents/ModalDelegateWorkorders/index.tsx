@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react";
 import { useOverview } from "@/context/OverviewContext";
 import {
   Button,
@@ -9,10 +10,8 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  Select,
   useDisclosure,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
 import { ButtonManagerUsers } from "./ButtonManagerUsers";
 
 interface Props {

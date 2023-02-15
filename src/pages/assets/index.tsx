@@ -1,12 +1,12 @@
+import { useState } from "react";
+import { Flex, Heading, Input, Text } from "@chakra-ui/react";
+import { GetServerSideProps, NextPage } from "next";
 import { container, Registry } from "@/@core/shared/container-registry";
-import { ListAssetsUsecase } from "@/@core/usecases/assets/application/list-assets-usecase";
 import { Assets } from "@/@core/usecases/assets/domain/entities/assets";
+import { ListAssetsUsecase } from "@/@core/usecases/assets/application/list-assets-usecase";
 import { GridAssets } from "@/components/AssetsComponents/GridAssets";
 import { EmptyList } from "@/components/SharedComponents/EmptyList";
 import { Header } from "@/components/SharedComponents/Header";
-import { Flex, Heading, Input, Text } from "@chakra-ui/react";
-import { GetServerSideProps, NextPage } from "next";
-import { useState } from "react";
 
 interface IListAssets {
   assets: Assets[];

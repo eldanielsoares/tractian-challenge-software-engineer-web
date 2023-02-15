@@ -1,5 +1,5 @@
-import { Box, Flex, Stack, Text } from "@chakra-ui/react";
 import React from "react";
+import { Flex, Stack, Text } from "@chakra-ui/react";
 import Lottie from "react-lottie";
 
 import Loading from "./assets/Loading.json";

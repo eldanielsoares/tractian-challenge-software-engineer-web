@@ -1,11 +1,11 @@
+import React from "react";
+import { GetServerSideProps, NextPage } from "next";
+import { Flex, Heading } from "@chakra-ui/react";
 import { container, Registry } from "@/@core/shared/container-registry";
 import { WorkordersUsecase } from "@/@core/usecases/workorders/application/list-workorders-usecase";
 import { Workorders } from "@/@core/usecases/workorders/domain/entities/workorders";
 import { Header } from "@/components/SharedComponents/Header";
 import { GridWorkorders } from "@/components/WorkordersComponents/GridWorkorders";
-import { Flex, Heading } from "@chakra-ui/react";
-import { GetServerSideProps, NextPage } from "next";
-import React from "react";
 
 interface WorkordersProps {
   workorders: Workorders[];

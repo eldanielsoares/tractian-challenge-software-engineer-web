@@ -1,8 +1,8 @@
+import React from "react";
 import { IAssets } from "@/@core/usecases/assets/domain/models/assets.model";
 import { IWorkOrdersOverview } from "@/@core/usecases/overview/domain/models/overview.models";
 import { useOverview } from "@/context/OverviewContext";
 import { Grid, GridItem } from "@chakra-ui/react";
-import React from "react";
 import { CardOpenWorks } from "../CardOpenWorks";
 
 interface GridWorkOrdersProps {

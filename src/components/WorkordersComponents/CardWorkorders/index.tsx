@@ -1,17 +1,15 @@
+import React from "react";
 import { IWorkOrders } from "@/@core/usecases/workorders/domain/models/workorders.models";
-import workorders from "@/pages/workorders";
 import { colors } from "@/utils/colors.obj";
 import { dictionary } from "@/utils/dictionary";
 import {
   Card,
   CardBody,
   Stack,
-  Button,
   Image,
   Text,
   CardFooter,
 } from "@chakra-ui/react";
-import React from "react";
 import { ModalDelegateWorkorders } from "../ModalDelegateWorkorders";
 
 interface CardWorkorders {

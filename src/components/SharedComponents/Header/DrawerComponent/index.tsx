@@ -1,3 +1,4 @@
+import React from "react";
 import { useSidebarDrawer } from "@/context/SidebarDrawerContext";
 import {
   Drawer,
@@ -6,10 +7,8 @@ import {
   DrawerCloseButton,
   DrawerHeader,
   DrawerBody,
-  Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import React from "react";
 import { NavHeader } from "../NavHeader";
 
 export const DrawerComponent: React.FC = () => {

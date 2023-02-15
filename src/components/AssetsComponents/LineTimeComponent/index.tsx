@@ -1,17 +1,8 @@
+import React from "react";
 import { IHealthHistory } from "@/@core/usecases/assets/domain/models/assets.model";
 import { dictionary } from "@/utils/dictionary";
-import {
-  Card,
-  CardBody,
-  Flex,
-  Grid,
-  GridItem,
-  HStack,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
+import { Card, CardBody, Grid, GridItem, Stack, Text } from "@chakra-ui/react";
 import { format } from "date-fns";
-import React from "react";
 import { LineTimeDivider } from "../LineTimeDivider";
 
 interface LineTimeComponentProps {

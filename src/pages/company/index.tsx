@@ -1,12 +1,12 @@
+import { GetServerSideProps, NextPage } from "next";
+import { Flex, Heading, Text } from "@chakra-ui/react";
+import { useOverview } from "@/context/OverviewContext";
 import { container, Registry } from "@/@core/shared/container-registry";
 import { CompanyByIdUsecase } from "@/@core/usecases/company/application/companyById-usecase";
 import { Company as CompanyData } from "@/@core/usecases/company/domain/entities/company";
 import { GridUnits } from "@/components/CompanyComponents/GridUnits";
 import { Header } from "@/components/SharedComponents/Header";
 import { SimpleCard } from "@/components/CompanyComponents/SimpleCard";
-import { useOverview } from "@/context/OverviewContext";
-import { Flex, Heading, Text } from "@chakra-ui/react";
-import { GetServerSideProps, NextPage } from "next";
 import { ModalAddAsset } from "@/components/CompanyComponents/ModalAddAsset";
 import { ModalUpdateCompany } from "@/components/CompanyComponents/ModalUpdateCompany";
 

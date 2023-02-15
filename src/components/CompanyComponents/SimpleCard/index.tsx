@@ -1,5 +1,5 @@
-import { Card, CardBody, CardFooter, Heading, Text } from "@chakra-ui/react";
 import React from "react";
+import { Card, CardBody, Text } from "@chakra-ui/react";
 
 interface SimpleCardProps {
   title: string;

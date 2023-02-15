@@ -4,6 +4,7 @@ import React from "react";
 import { Chart } from "./Chart";
 import groupBy from "lodash/groupBy";
 import { dictionary } from "@/utils/dictionary";
+import { colors } from "@/utils/colors.obj";
 
 interface Chart {
   name: string;
@@ -15,12 +16,6 @@ interface OverviewColumnChartProps {
   data: IAssets[];
   onClick: () => void;
 }
-
-const colors: any = {
-  inAlert: "#EEC03F",
-  inOperation: "#2FCE52",
-  inDowntime: "#ee453f",
-};
 
 export const OverviewPieChartComponent: React.FC<OverviewColumnChartProps> = ({
   data,

@@ -1,7 +1,7 @@
+import React from "react";
 import { User } from "@/@core/usecases/users/domain/entities/user";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import React from "react";
 import { SimpleCardUser } from "../SimpleCardUser";
 
 interface IUserProps {

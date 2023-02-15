@@ -1,5 +1,5 @@
-import { Stack, Image, Text } from "@chakra-ui/react";
 import React from "react";
+import { Stack, Image, Text } from "@chakra-ui/react";
 
 export const EmptyList: React.FC = () => {
   return (

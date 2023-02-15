@@ -1,4 +1,3 @@
-import { IUser } from "@/@core/usecases/users/domain/models/users.model";
 import { ICompany } from "../models/company.models";
 
 export class Company {

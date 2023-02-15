@@ -1,3 +1,6 @@
+import { Flex, Heading } from "@chakra-ui/react";
+import { GetServerSideProps, NextPage } from "next";
+import { useOverview } from "@/context/OverviewContext";
 import { container, Registry } from "@/@core/shared/container-registry";
 import { IUnits } from "@/@core/usecases/overview/domain/models/overview.models";
 import { UserByIdUsecase } from "@/@core/usecases/users/application/userById";
@@ -5,9 +8,6 @@ import { User } from "@/@core/usecases/users/domain/entities/user";
 import { CardUserDetails } from "@/components/UsersComponents/CardUserDetails";
 import { GridWorkOrders } from "@/components/UsersComponents/GridWorkOrders";
 import { Header } from "@/components/SharedComponents/Header";
-import { useOverview } from "@/context/OverviewContext";
-import { Flex, Heading, Text } from "@chakra-ui/react";
-import { GetServerSideProps, NextPage } from "next";
 
 interface IUSerProps {
   user: User;
