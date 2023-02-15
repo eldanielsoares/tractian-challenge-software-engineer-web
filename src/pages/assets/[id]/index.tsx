@@ -9,7 +9,7 @@ import { useOverview } from "@/context/OverviewContext";
 import { Flex } from "@chakra-ui/react";
 import { GetServerSideProps, NextPage } from "next";
 import LineChartComponent from "@/components/AssetsComponents/LineChartComponent";
-import { health, temperature } from "../mock/fake.data";
+import { health, temperature } from "../../../mock/fake.data";
 import { TableHealth } from "@/components/AssetsComponents/TableHealth";
 
 interface IAssets {
