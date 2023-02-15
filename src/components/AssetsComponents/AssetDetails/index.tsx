@@ -1,4 +1,5 @@
 import { Assets } from "@/@core/usecases/assets/domain/entities/assets";
+import { colors } from "@/utils/colors.obj";
 import { dictionary } from "@/utils/dictionary";
 import {
   Card,
@@ -151,7 +152,11 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
               <GridItem minW={"120px"}>
                 <Text fontSize={["2xl", "lg"]}>
                   Status: <br />
-                  <Text as={"span"} fontWeight="semibold">
+                  <Text
+                    as={"span"}
+                    fontWeight="semibold"
+                    color={colors[asset.status]}
+                  >
                     {dictionary(asset.status)}
                   </Text>
                 </Text>

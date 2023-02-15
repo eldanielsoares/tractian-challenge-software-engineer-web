@@ -1,7 +1,13 @@
 import { Flex } from "@chakra-ui/react";
 import React from "react";
 import { NavLink } from "../NavLink";
-import { FiAirplay, FiGrid, FiTool, FiUsers } from "react-icons/fi";
+import {
+  FiAirplay,
+  FiBriefcase,
+  FiGrid,
+  FiTool,
+  FiUsers,
+} from "react-icons/fi";
 
 export const NavHeader: React.FC = () => {
   return (
@@ -16,6 +22,10 @@ export const NavHeader: React.FC = () => {
 
       <NavLink icon={FiTool} href="/assets">
         Máquinas
+      </NavLink>
+
+      <NavLink icon={FiBriefcase} href="/workorders">
+        Ordens de trabalho
       </NavLink>
 
       <NavLink icon={FiUsers} href="/users">

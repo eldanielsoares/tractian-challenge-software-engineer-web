@@ -32,7 +32,7 @@ export const ModalEditAddUnit: React.FC<Props> = ({ name = "" }) => {
         <Icon
           as={FiEdit}
           color={"#d9d9d9"}
-          boxSize={"4"}
+          boxSize={"5"}
           alignSelf="flex-end"
           onClick={onOpen}
         />

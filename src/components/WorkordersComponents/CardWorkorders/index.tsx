@@ -12,6 +12,7 @@ import {
   CardFooter,
 } from "@chakra-ui/react";
 import React from "react";
+import { ModalDelegateWorkorders } from "../ModalDelegateWorkorders";
 
 interface CardWorkorders {
   workorders: IWorkOrders;
@@ -93,16 +94,7 @@ export const CardWorkorders: React.FC<CardWorkorders> = ({
         </Stack>
       </CardBody>
       <CardFooter>
-        <Button
-          w={"150px"}
-          bg="#214DB6"
-          color={"white"}
-          _hover={{
-            background: "#214DB690",
-          }}
-        >
-          Responsáveis
-        </Button>
+        <ModalDelegateWorkorders ids={workorders.assignedUserIds} />
       </CardFooter>
     </Card>
   );
