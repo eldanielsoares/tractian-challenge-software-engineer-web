@@ -33,7 +33,9 @@ export const GridAssets: React.FC<GridProps> = ({ assets = [] }) => {
             model={asset.model}
             status={asset.status}
             sensors={asset.sensors}
-            onClick={() => push(`/assets/${asset.id}`)}
+            onClick={() =>
+              push(`/assets/${asset.id}`, undefined, { shallow: true })
+            }
           />
         </GridItem>
       ))}
