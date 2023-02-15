@@ -29,9 +29,7 @@ export const GridUsers: React.FC<IUserProps> = ({ users = [] }) => {
         <GridItem w="100%" minW={["130px", "200px"]} key={key}>
           <SimpleCardUser
             user={user}
-            onClick={() =>
-              push(`/users/${user.id}`, undefined, { shallow: true })
-            }
+            onClick={() => push(`/users/${user.id}`)}
           />
         </GridItem>
       ))}

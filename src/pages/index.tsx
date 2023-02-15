@@ -46,27 +46,24 @@ export default function Home() {
             <OverviewColumnChartComponent
               data={assets}
               titleY={"%"}
-              onClick={() => push("/assets", undefined, { shallow: true })}
+              onClick={() => push("/assets")}
             />
           </GridItem>
           <GridItem minW={"256px"}>
             <OverviewPieChartComponent
               data={assets}
-              onClick={() => push("/assets", undefined, { shallow: true })}
+              onClick={() => push("/assets")}
             />
           </GridItem>
 
           <GridItem minW={"256px"}>
             <OverviewCardCompany
               assetsActive={assetsActive}
-              onClick={() => push("/company", undefined, { shallow: true })}
+              onClick={() => push("/company")}
             />
           </GridItem>
           <GridItem minW={"256px"}>
-            <OverviewTeam
-              users={users}
-              onClick={() => push("/users", undefined, { shallow: true })}
-            />
+            <OverviewTeam users={users} onClick={() => push("/users")} />
           </GridItem>
         </Grid>
       </Flex>
