@@ -66,6 +66,7 @@ const Company: NextPage<ICompanyProps> = ({ company }) => {
           justifyContent={["center", "center", "center", "space-between"]}
           flexWrap={"wrap"}
           my={4}
+          gap={3}
         >
           <SimpleCard
             title={`Máquinas`}

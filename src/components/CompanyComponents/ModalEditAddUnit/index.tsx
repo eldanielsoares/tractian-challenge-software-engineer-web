@@ -35,7 +35,12 @@ export const ModalEditAddUnit: React.FC<Props> = ({ name = "" }) => {
           cursor="pointer"
         />
       ) : (
-        <Flex minH={"160px"} alignItems="center" cursor={"pointer"}>
+        <Flex
+          minH={"160px"}
+          alignItems="center"
+          cursor={"pointer"}
+          justify={"center"}
+        >
           <NameIcon name="+" isIcon={true} onClick={onOpen} />
         </Flex>
       )}
