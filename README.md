@@ -29,8 +29,14 @@
 > - Axios
 > - Chakra UI
 
+<div align="center">
+ <img src="https://user-images.githubusercontent.com/48698464/219262461-6578cff5-4db0-4cbf-95e7-3805ea130d15.png"/>
+ <img src="https://user-images.githubusercontent.com/48698464/219263173-8425e13a-5808-4cde-b6d0-e3056cc690b8.png"/>
+ <img src="https://user-images.githubusercontent.com/48698464/219263321-38eb30dc-be01-4c61-a0b6-2cca46e82a35.png"/>
+ 
 
-## Veja em produção em : 
+
+## Mais em : 
 <a href="https://tractian-challenge-software-engineer-web.vercel.app/">https://tractian-challenge-software-engineer-web.vercel.app/</a>
 
 
