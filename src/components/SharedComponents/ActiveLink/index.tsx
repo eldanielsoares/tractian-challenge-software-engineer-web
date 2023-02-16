@@ -30,8 +30,11 @@ export const ActiveLink: React.FC<ActiveLinkProps> = ({
   return (
     <Link {...rest}>
       {cloneElement(children, {
+        color: isActive
+          ? ["#7c53ec", "#7c53ec", "#7c53ec", "#f5f5f5"]
+          : ["#214DB6", "#214DB6", "#214DB6", "#f5f5f5"],
         borderBottomColor: "#f5f5f5",
-        borderBottomWidth: isActive ? "2px" : "none",
+        borderBottomWidth: isActive ? ["0", "0", "0", "2px"] : "none",
       })}
     </Link>
   );

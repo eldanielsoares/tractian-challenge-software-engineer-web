@@ -23,7 +23,7 @@ export const NavLink: React.FC<NavLinkProps> = ({
         alignItems="center"
         py={"1"}
         {...rest}
-        color="#f5f5f5"
+        color={["#214DB6", "#214DB6", "#214DB6", "#f5f5f5"]}
       >
         <Icon as={icon} fontSize="20" />
         <Text ml={"2"} fontWeight="medium">
