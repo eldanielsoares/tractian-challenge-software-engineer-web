@@ -29,7 +29,7 @@ const LineChartComponent: React.FC<Data> = ({
             {title}
           </Text>
           {subtitle && (
-            <Text fontSize={"lg"} fontWeight="regular" color={"#6f6f6f"}>
+            <Text fontSize={"md"} fontWeight="regular" color={"#6f6f6f"}>
               {subtitle}
             </Text>
           )}

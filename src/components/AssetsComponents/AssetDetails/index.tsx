@@ -11,7 +11,6 @@ import {
   Text,
   Grid,
   GridItem,
-  HStack,
 } from "@chakra-ui/react";
 import { format } from "date-fns";
 import { ModalUpdateAsset } from "../ModalUpdateAsset";
@@ -36,7 +35,12 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
             objectFit="cover"
           />
           <Stack ml={[0, 0, 0, 4]}>
-            <Flex w={"100%"} justifyContent={"center"} alignItems="center">
+            <Flex
+              w={"100%"}
+              justifyContent={"center"}
+              alignItems="center"
+              mb={"4"}
+            >
               <Text
                 fontSize={"2xl"}
                 color="#214DB6"

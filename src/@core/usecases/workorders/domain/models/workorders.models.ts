@@ -1,5 +1,5 @@
 export interface IChecklist {
-  completed: true;
+  completed: boolean;
   task: string;
 }
 

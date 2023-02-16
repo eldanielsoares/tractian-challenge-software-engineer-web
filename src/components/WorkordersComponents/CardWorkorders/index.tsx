@@ -10,6 +10,7 @@ import {
   Text,
   CardFooter,
   HStack,
+  Checkbox,
 } from "@chakra-ui/react";
 import { ModalDelegateWorkorders } from "../ModalDelegateWorkorders";
 import { TextDecorated } from "@/components/SharedComponents/TextDecorated";
@@ -40,14 +41,17 @@ export const CardWorkorders: React.FC<CardWorkorders> = ({
           <Text fontSize="2xl" fontWeight={"semibold"}>
             {name}
           </Text>
-          <Text fontSize="lg" color={"#6f6f6f"}>
-            Descrição:
-            <Text as={"span"} fontWeight="semibold">
-              {workorders.description}
-            </Text>
+
+          <Text
+            as={"span"}
+            fontWeight="semibold"
+            color={"#6f6f6f"}
+            fontSize="lg"
+          >
+            {workorders.description}
           </Text>
 
-          <Stack direction={"row"} justifyContent={"space-between"}>
+          <Stack direction={"row"} spacing={3}>
             <Text fontSize="sm" fontWeight={"medium"}>
               Status:
               <br />
@@ -66,15 +70,20 @@ export const CardWorkorders: React.FC<CardWorkorders> = ({
               Tarefas
             </Text>
             {workorders.checklist.map((cl, key) => (
-              <Text
-                key={key}
-                fontWeight={"medium"}
-                color={
-                  cl.completed ? colors["completed"] : colors["uncompleted"]
-                }
-              >
-                -{cl.task}
-              </Text>
+              <HStack key={key}>
+                <Checkbox
+                  defaultChecked={cl.completed}
+                  disabled={cl.completed}
+                ></Checkbox>
+                <Text
+                  textDecoration={cl.completed ? "line-through" : "none"}
+                  color={
+                    cl.completed ? colors["finished"] : colors["uncompleted"]
+                  }
+                >
+                  {cl.task}
+                </Text>
+              </HStack>
             ))}
           </Stack>
           <ModalDelegateWorkorders ids={workorders.assignedUserIds} />

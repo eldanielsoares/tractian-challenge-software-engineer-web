@@ -9,7 +9,7 @@ export interface IUnits {
 }
 
 export interface IChecklistOverview {
-  completed: true;
+  completed: boolean;
   task: string;
 }
 

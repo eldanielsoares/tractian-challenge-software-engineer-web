@@ -30,7 +30,7 @@ const Users: NextPage<IUsersProps> = ({ users }) => {
           Equipe
         </Heading>
 
-        <Text fontSize={"lg"} mb={3}>
+        <Text fontSize={"lg"}>
           Aqui está sua equipe, clique no card para mais detalhes
         </Text>
 

@@ -42,7 +42,9 @@ export const ModalUpdateAsset: React.FC<Props> = ({ name, sensor }) => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Adicionar máquina</ModalHeader>
+          <ModalHeader>
+            {name ? "Editar máquina" : "Adicionar máquina"}
+          </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Input

@@ -25,13 +25,10 @@ export const GridUnits: React.FC<IUnitsProps> = ({ units = [] }) => {
       alignSelf={["center", "flex-start"]}
     >
       {units.map((unit, key) => (
-        <GridItem w="100%" minW={"130px"} key={key}>
+        <GridItem w="100%" key={key}>
           <SimpleCardUnit unit={unit} />
         </GridItem>
       ))}
-      <GridItem w="100%" minW={"130px"}>
-        <ModalEditAddUnit />
-      </GridItem>
     </Grid>
   );
 };

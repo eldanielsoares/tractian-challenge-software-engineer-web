@@ -12,7 +12,7 @@ export const TextDecorated: React.FC<Props> = ({ title }) => {
     <Text
       fontSize={"md"}
       color={colors[title]}
-      bg={`${colors[title]}40`}
+      bg={`${colors[title]}30`}
       px={3}
       py="0.5px"
       borderRadius="lg"

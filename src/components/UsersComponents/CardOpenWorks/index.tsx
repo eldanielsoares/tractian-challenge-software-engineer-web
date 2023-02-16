@@ -2,7 +2,15 @@ import React from "react";
 import { colors } from "@/utils/colors.obj";
 import { dictionary } from "@/utils/dictionary";
 import { IWorkOrdersOverview } from "@/@core/usecases/overview/domain/models/overview.models";
-import { Card, CardBody, Image, Stack, Text } from "@chakra-ui/react";
+import {
+  Card,
+  CardBody,
+  Checkbox,
+  HStack,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import { TextDecorated } from "@/components/SharedComponents/TextDecorated";
 
 interface CardOpenWork {
@@ -31,14 +39,17 @@ export const CardOpenWorks: React.FC<CardOpenWork> = ({
           <Text fontSize="2xl" fontWeight={"semibold"}>
             {name}
           </Text>
-          <Text fontSize="lg" color={"#6f6f6f"}>
-            Descrição:
-            <Text as={"span"} fontWeight="semibold">
-              {workopen.description}
-            </Text>
+
+          <Text
+            as={"span"}
+            fontWeight="semibold"
+            color={"#6f6f6f"}
+            fontSize="lg"
+          >
+            {workopen.description}
           </Text>
 
-          <Stack direction={"row"} justifyContent={"space-between"}>
+          <Stack direction={"row"} spacing={12}>
             <Text fontSize="sm" fontWeight={"medium"}>
               Status:
               <br />
@@ -57,15 +68,20 @@ export const CardOpenWorks: React.FC<CardOpenWork> = ({
               Tarefas
             </Text>
             {workopen.checklist.map((cl, key) => (
-              <Text
-                key={key}
-                fontWeight={"medium"}
-                color={
-                  cl.completed ? colors["completed"] : colors["uncompleted"]
-                }
-              >
-                -{cl.task}
-              </Text>
+              <HStack key={key}>
+                <Checkbox
+                  defaultChecked={cl.completed}
+                  disabled={cl.completed}
+                ></Checkbox>
+                <Text
+                  textDecoration={cl.completed ? "line-through" : "none"}
+                  color={
+                    cl.completed ? colors["finished"] : colors["uncompleted"]
+                  }
+                >
+                  {cl.task}
+                </Text>
+              </HStack>
             ))}
           </Stack>
         </Stack>

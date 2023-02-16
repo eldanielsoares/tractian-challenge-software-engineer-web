@@ -13,7 +13,7 @@ import {
   useDisclosure,
   Flex,
 } from "@chakra-ui/react";
-import { FiEdit } from "react-icons/fi";
+import { FiEdit, FiPlus } from "react-icons/fi";
 import { Input } from "@/components/SharedComponents/Input";
 
 interface Props {
@@ -36,12 +36,17 @@ export const ModalEditAddUnit: React.FC<Props> = ({ name = "" }) => {
         />
       ) : (
         <Flex
-          minH={"160px"}
           alignItems="center"
           cursor={"pointer"}
           justify={"center"}
+          w={"24px"}
+          h="24px"
+          borderRadius="full"
+          borderWidth={"1px"}
+          borderColor="#214db6"
+          onClick={onOpen}
         >
-          <NameIcon name="+" isIcon={true} onClick={onOpen} />
+          <Icon as={FiPlus} color={"#214db6"} />
         </Flex>
       )}
 

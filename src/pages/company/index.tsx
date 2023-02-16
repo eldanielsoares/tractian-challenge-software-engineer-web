@@ -1,5 +1,5 @@
 import { GetServerSideProps, NextPage } from "next";
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Flex, Heading, HStack, Text } from "@chakra-ui/react";
 import { useOverview } from "@/context/OverviewContext";
 import { container, Registry } from "@/@core/shared/container-registry";
 import { CompanyByIdUsecase } from "@/@core/usecases/company/application/companyById-usecase";
@@ -9,6 +9,7 @@ import { Header } from "@/components/SharedComponents/Header";
 import { SimpleCard } from "@/components/CompanyComponents/SimpleCard";
 import { ModalAddAsset } from "@/components/CompanyComponents/ModalAddAsset";
 import { ModalUpdateCompany } from "@/components/CompanyComponents/ModalUpdateCompany";
+import { ModalEditAddUnit } from "@/components/CompanyComponents/ModalEditAddUnit";
 
 interface ICompanyProps {
   company: CompanyData;
@@ -51,10 +52,12 @@ const Company: NextPage<ICompanyProps> = ({ company }) => {
             name={overview.companies && overview.companies[0].name}
           />
         </Flex>
-
-        <Text fontSize={"2xl"} color="#222" mt={6} fontWeight="semibold">
-          Unidades
-        </Text>
+        <Flex alignItems={"center"} mt={2}>
+          <Text fontSize={"2xl"} color="#222" mr={"2"} fontWeight="semibold">
+            Unidades
+          </Text>
+          <ModalEditAddUnit />
+        </Flex>
         <GridUnits units={findUnits} />
 
         <Text fontSize={"2xl"} color="#222" mt={6} fontWeight="semibold">

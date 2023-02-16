@@ -31,7 +31,7 @@ export default function Home() {
           <Text as={"span"} fontWeight="medium">
             {overview.companies ? overview.companies[0].name : ""}
           </Text>{" "}
-          , Este é um pequeno resumo da sua empresa,
+          , este é um pequeno resumo da sua empresa,
           <br />
           clique em um dos cards para ver os detalhes completos
         </Text>

@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
     <Flex
       as={"header"}
       w={"100%"}
-      h={["80px", "95px"]}
+      h={["80px"]}
       mx={"auto"}
       alignItems="center"
       bg="#214DB6"
@@ -44,7 +44,7 @@ export const Header: React.FC = () => {
             <Image
               src="/images/tractian.svg"
               alt="image"
-              width={180}
+              width={160}
               height={60}
             />
           </Link>

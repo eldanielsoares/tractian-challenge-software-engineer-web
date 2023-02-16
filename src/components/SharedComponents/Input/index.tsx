@@ -16,6 +16,7 @@ export const Input: React.FC<Props> = ({ label, ...rest }) => {
         {...rest}
         maxW={["auto", "400px"]}
         variant="outline"
+        bg={"#fff"}
       />
     </>
   );

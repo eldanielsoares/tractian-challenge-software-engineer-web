@@ -34,7 +34,7 @@ export const CardUserDetails: React.FC<IUserProps> = ({
       <CardBody>
         <HStack spacing={"4"}>
           {isVisibleIcon && <NameIcon name={user.name} />}
-          <Stack w={"100%"}>
+          <Stack w={"80%"}>
             <ModalUpdateUser user={user} />
             <Text>
               Nome:{" "}
