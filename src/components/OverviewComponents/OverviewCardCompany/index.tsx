@@ -36,7 +36,7 @@ export const OverviewCardCompany: React.FC<OverviewCardCompanyProps> = ({
             <Text>
               Sede:{" "}
               <Text as={"span"} fontWeight="semibold">
-                Rua Olinda Ellis, Campo de campo
+                Rua Olinda Ellis, Campo de Grande
               </Text>
             </Text>
           </HStack>
