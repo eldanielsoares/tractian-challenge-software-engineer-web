@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">
+    Desafio Software Engineer Frontend Tractian
+    <img src="https://tractian.com/images/thumb-tractian.png" alt="tractian" />
+    <br>
+    <br>
+</h1>
+
+<h2 align="center">
+  Essa é a versão web responsiva solicitada no desafio.
+</h2>
+<h3>
+  Para o desafio foi usado o Nextjs e Clean Architecture, junto com o Chakra Ui para estilização
+</h3>
 
 ## Getting Started
 
