@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { NameIcon } from "@/components/SharedComponents/NameIcon";
 import {
   Button,
-  Card,
-  CardBody,
   Icon,
-  Input,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -13,11 +10,11 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  Stack,
   useDisclosure,
-  Text,
+  Flex,
 } from "@chakra-ui/react";
 import { FiEdit } from "react-icons/fi";
+import { Input } from "@/components/SharedComponents/Input";
 
 interface Props {
   name?: string;
@@ -35,26 +32,12 @@ export const ModalEditAddUnit: React.FC<Props> = ({ name = "" }) => {
           boxSize={"5"}
           alignSelf="flex-end"
           onClick={onOpen}
+          cursor="pointer"
         />
       ) : (
-        <Card maxW={["272px", "200px"]} minH={"160px"}>
-          <CardBody
-            py={4}
-            px={4}
-            display="flex"
-            flexDirection={"column"}
-            alignItems="center"
-            justifyContent={"center"}
-            onClick={onOpen}
-          >
-            <NameIcon name={"+"} />
-            <Stack spacing="1" p={3}>
-              <Text fontSize="lg" fontWeight={"bold"} textAlign="center">
-                Adicionar
-              </Text>
-            </Stack>
-          </CardBody>
-        </Card>
+        <Flex minH={"160px"} alignItems="center" cursor={"pointer"}>
+          <NameIcon name="+" isIcon={true} onClick={onOpen} />
+        </Flex>
       )}
 
       <Modal isOpen={isOpen} onClose={onClose}>
@@ -65,12 +48,10 @@ export const ModalEditAddUnit: React.FC<Props> = ({ name = "" }) => {
           <ModalBody>
             <Input
               value={input}
-              maxW={["auto", "400px"]}
               placeholder={"Digite o nome da unidade"}
-              variant="outline"
               onChange={(event) => setInput(event.target.value)}
               alignSelf={"center"}
-              mt="10"
+              label={"Nome da unidade"}
             />
           </ModalBody>
 

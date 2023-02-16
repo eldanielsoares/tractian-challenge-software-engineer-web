@@ -11,8 +11,10 @@ import {
   Text,
   Grid,
   GridItem,
+  HStack,
 } from "@chakra-ui/react";
 import { format } from "date-fns";
+import { ModalUpdateAsset } from "../ModalUpdateAsset";
 
 interface AssetDetailsProps {
   asset: Assets;
@@ -34,15 +36,17 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
             objectFit="cover"
           />
           <Stack ml={[0, 0, 0, 4]}>
-            <Text
-              fontSize={"2xl"}
-              color="#214DB6"
-              fontWeight={"semibold"}
-              alignSelf={["center"]}
-              mb={4}
-            >
-              {asset.name}
-            </Text>
+            <Flex w={"100%"} justifyContent={"center"} alignItems="center">
+              <Text
+                fontSize={"2xl"}
+                color="#214DB6"
+                fontWeight={"semibold"}
+                alignSelf={["center"]}
+              >
+                {asset.name}
+              </Text>
+              <ModalUpdateAsset name={asset.name} sensor={asset.sensors[0]} />
+            </Flex>
 
             <Grid
               templateColumns={[
@@ -97,27 +101,14 @@ export const AssetDetails: React.FC<AssetDetailsProps> = ({ asset, unit }) => {
                 </GridItem>
               )}
 
-              {asset.specifications.power && (
-                <GridItem minW={"120px"}>
-                  <Text fontSize={["2xl", "lg"]}>
-                    Potência: <br />
-                    <Text as={"span"} fontWeight="semibold">
-                      {asset.specifications.power || "-"}
-                    </Text>
+              <GridItem minW={"120px"}>
+                <Text fontSize={["2xl", "lg"]}>
+                  Potência: <br />
+                  <Text as={"span"} fontWeight="semibold">
+                    {asset.specifications.power || "-"}
                   </Text>
-                </GridItem>
-              )}
-
-              {asset.specifications.rpm && (
-                <GridItem minW={"120px"}>
-                  <Text fontSize={["2xl", "lg"]}>
-                    RPM: <br />
-                    <Text as={"span"} fontWeight="semibold">
-                      {asset.specifications.rpm || "-"}
-                    </Text>
-                  </Text>
-                </GridItem>
-              )}
+                </Text>
+              </GridItem>
 
               <GridItem minW={"120px"}>
                 <Text fontSize={["2xl", "lg"]}>

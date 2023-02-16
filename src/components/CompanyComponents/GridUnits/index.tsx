@@ -18,7 +18,7 @@ export const GridUnits: React.FC<IUnitsProps> = ({ units = [] }) => {
         "repeat(4, 1fr)",
         "repeat(5, 1fr)",
       ]}
-      gap={"55px"}
+      gap={6}
       flexWrap={"nowrap"}
       my={6}
       justifyContent="space-between"

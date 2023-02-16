@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, Text } from "@chakra-ui/react";
+import { Card, CardBody, Flex, Text } from "@chakra-ui/react";
 
 interface SimpleCardProps {
   title: string;
@@ -13,7 +13,7 @@ export const SimpleCard: React.FC<SimpleCardProps> = ({
   modal,
 }) => {
   return (
-    <Card w={["256px", "400px"]}>
+    <Card w={["256px"]}>
       <CardBody
         py={8}
         px={4}
@@ -21,24 +21,31 @@ export const SimpleCard: React.FC<SimpleCardProps> = ({
         flexDirection={"column"}
         alignItems="center"
       >
-        <Text
-          fontSize={"2xl"}
-          fontWeight={"bold"}
-          color="#6f6f6f"
-          textAlign="center"
+        <Flex
+          justifyContent={"center"}
+          alignItems="center"
+          w={"100%"}
+          gap={"4"}
         >
-          {title}
-        </Text>
+          <Text
+            fontSize={"2xl"}
+            fontWeight={"bold"}
+            color="#6f6f6f"
+            textAlign="center"
+          >
+            {title}
+          </Text>
+          {modal}
+        </Flex>
 
         <Text
-          fontSize={"128px"}
+          fontSize={"62px"}
           fontWeight={"bold"}
           textAlign="center"
           color={"#214DB6"}
         >
           {value}
         </Text>
-        {modal}
       </CardBody>
     </Card>
   );

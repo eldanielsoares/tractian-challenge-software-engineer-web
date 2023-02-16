@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import {
   Button,
   Icon,
-  Input,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -13,6 +12,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { FiEdit } from "react-icons/fi";
+import { Input } from "@/components/SharedComponents/Input";
 
 interface Props {
   name: string;
@@ -35,6 +35,7 @@ export const ModalUpdateCompany: React.FC<Props> = ({ name }) => {
         boxSize={"5"}
         alignSelf="flex-end"
         onClick={onOpen}
+        cursor="pointer"
       />
 
       <Modal isOpen={isOpen} onClose={onClose}>
@@ -45,12 +46,10 @@ export const ModalUpdateCompany: React.FC<Props> = ({ name }) => {
           <ModalBody>
             <Input
               value={input}
-              maxW={["auto", "400px"]}
               placeholder={"Digite o nome da Empresa"}
-              variant="outline"
               onChange={(event) => setInput(event.target.value)}
               alignSelf={"center"}
-              mt="10"
+              label={"Nome da empresa"}
             />
           </ModalBody>
 

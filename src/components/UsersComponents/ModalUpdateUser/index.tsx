@@ -5,7 +5,6 @@ import { useOverview } from "@/context/OverviewContext";
 import {
   Button,
   Icon,
-  Input,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -15,7 +14,9 @@ import {
   ModalOverlay,
   Select,
   useDisclosure,
+  Text,
 } from "@chakra-ui/react";
+import { Input } from "@/components/SharedComponents/Input";
 
 interface Props {
   user: IUser;
@@ -41,6 +42,7 @@ export const ModalUpdateUser: React.FC<Props> = ({ user }) => {
         boxSize={"5"}
         alignSelf="flex-end"
         onClick={onOpen}
+        cursor="pointer"
       />
 
       <Modal isOpen={isOpen} onClose={onClose}>
@@ -51,35 +53,36 @@ export const ModalUpdateUser: React.FC<Props> = ({ user }) => {
           <ModalBody>
             <Input
               value={name}
-              maxW={["auto", "400px"]}
               placeholder={"Digite o nome do usuário"}
-              variant="outline"
               onChange={(event) => setName(event.target.value)}
               alignSelf={"center"}
-              mt="4"
+              label={"Nome"}
             />
 
             <Input
               value={email}
-              maxW={["auto", "400px"]}
               placeholder={"Digite o e-mail do usuário"}
-              variant="outline"
               onChange={(event) => setEmail(event.target.value)}
               alignSelf={"center"}
-              mt="4"
+              label={"E-mail"}
+              type="email"
             />
 
-            <Select
-              placeholder="Escolha a unidade"
-              defaultValue={units.find((u) => u.id === user.id)?.name}
-              mt="4"
-            >
-              {units.map((unit, key) => (
-                <option value={unit.name} key={key}>
-                  {unit.name}
-                </option>
-              ))}
-            </Select>
+            <>
+              <Text fontSize={"md"} color="#222" mt={"1"}>
+                Unidade
+              </Text>
+              <Select
+                placeholder="Escolha a unidade"
+                defaultValue={units.find((u) => u.id === user.id)?.name}
+              >
+                {units.map((unit, key) => (
+                  <option value={unit.name} key={key}>
+                    {unit.name}
+                  </option>
+                ))}
+              </Select>
+            </>
           </ModalBody>
 
           <ModalFooter>

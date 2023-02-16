@@ -22,12 +22,16 @@ export default function Home() {
     <>
       <Header />
       <Flex maxW={1480} px={8} mx="auto" direction="column">
-        <Heading color="#214DB6" mt={6} mb={2} fontWeight="semibold">
+        <Heading color="#214DB6" mt={"64px"} mb={2} fontWeight="semibold">
           Visão geral
         </Heading>
 
         <Text fontSize={"md"}>
-          Este é um pequeno resumo da sua empresa,
+          Olá,{" "}
+          <Text as={"span"} fontWeight="medium">
+            {overview.companies ? overview.companies[0].name : ""}
+          </Text>{" "}
+          , Este é um pequeno resumo da sua empresa,
           <br />
           clique em um dos cards para ver os detalhes completos
         </Text>
@@ -37,7 +41,7 @@ export default function Home() {
             "repeat(1, 1fr)",
             "repeat(2, 1fr)",
           ]}
-          gap={8}
+          gap={4}
           rowGap={6}
           flexWrap={"wrap"}
           my={"10"}

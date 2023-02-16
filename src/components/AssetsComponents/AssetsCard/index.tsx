@@ -39,7 +39,7 @@ export const AssetsCard: React.FC<AssetsCardProps> = ({
           h={"190px"}
           objectFit="cover"
         />
-        <Stack spacing="1" p={3}>
+        <Stack spacing="1" p={4} my={2}>
           <Heading fontSize="lg" fontWeight={"semibold"}>
             {name}
           </Heading>

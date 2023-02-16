@@ -3,6 +3,7 @@ import { colors } from "@/utils/colors.obj";
 import { dictionary } from "@/utils/dictionary";
 import { IWorkOrdersOverview } from "@/@core/usecases/overview/domain/models/overview.models";
 import { Card, CardBody, Image, Stack, Text } from "@chakra-ui/react";
+import { TextDecorated } from "@/components/SharedComponents/TextDecorated";
 
 interface CardOpenWork {
   workopen: IWorkOrdersOverview;
@@ -16,7 +17,7 @@ export const CardOpenWorks: React.FC<CardOpenWork> = ({
   name,
 }) => {
   return (
-    <Card maxW={["256px", "300px"]} p={0} minH={["auto", "680px"]} pb={4}>
+    <Card p={0} pb={4}>
       <CardBody p={0}>
         <Image
           src={image}
@@ -26,61 +27,47 @@ export const CardOpenWorks: React.FC<CardOpenWork> = ({
           h={"200px"}
           objectFit="cover"
         />
-        <Stack spacing="3" p={3}>
+        <Stack spacing="3" py={3} px={4}>
           <Text fontSize="2xl" fontWeight={"semibold"}>
             {name}
           </Text>
-          <Text fontSize="sm" color={"#6f6f6f"}>
-            Descrição:{" "}
+          <Text fontSize="lg" color={"#6f6f6f"}>
+            Descrição:
             <Text as={"span"} fontWeight="semibold">
               {workopen.description}
             </Text>
           </Text>
 
-          <Text fontSize="sm">
-            Status:{" "}
-            <Text
-              as={"span"}
-              fontWeight="semibold"
-              color={colors[workopen.status]}
-              bg={`${colors[workopen.status]}70`}
-              px={4}
-              rounded="md"
-              borderWidth={"1px"}
-              borderColor={colors[workopen.status]}
-            >
-              {dictionary(workopen.status)}
+          <Stack direction={"row"} justifyContent={"space-between"}>
+            <Text fontSize="sm" fontWeight={"medium"}>
+              Status:
+              <br />
+              <TextDecorated title={workopen.status} />
             </Text>
-          </Text>
 
-          <Text fontSize="sm">
-            Prioridade:{" "}
-            <Text
-              as={"span"}
-              fontWeight="semibold"
-              color={colors[workopen.priority]}
-              bg={`${colors[workopen.priority]}50`}
-              px={4}
-              rounded="md"
-              borderWidth={"1px"}
-              borderColor={colors[workopen.priority]}
-            >
-              {dictionary(workopen.priority)}
+            <Text fontSize="sm" fontWeight={"medium"}>
+              Prioridade:
+              <br />
+              <TextDecorated title={workopen.priority} />
             </Text>
-          </Text>
+          </Stack>
 
-          <Text fontSize="md" fontWeight={"semibold"}>
-            Tarefas
-          </Text>
-
-          {workopen.checklist.map((cl, key) => (
-            <Text
-              key={key}
-              color={cl.completed ? colors["completed"] : colors["uncompleted"]}
-            >
-              -{cl.task}
+          <Stack spacing={"1"}>
+            <Text fontSize="lg" fontWeight={"semibold"}>
+              Tarefas
             </Text>
-          ))}
+            {workopen.checklist.map((cl, key) => (
+              <Text
+                key={key}
+                fontWeight={"medium"}
+                color={
+                  cl.completed ? colors["completed"] : colors["uncompleted"]
+                }
+              >
+                -{cl.task}
+              </Text>
+            ))}
+          </Stack>
         </Stack>
       </CardBody>
     </Card>

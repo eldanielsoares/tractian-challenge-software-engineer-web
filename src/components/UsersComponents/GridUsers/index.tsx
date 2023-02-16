@@ -19,7 +19,7 @@ export const GridUsers: React.FC<IUserProps> = ({ users = [] }) => {
         "repeat(4, 1fr)",
         "repeat(5, 1fr)",
       ]}
-      gap={"55px"}
+      gap={5}
       flexWrap={"nowrap"}
       my={"10"}
       justifyContent="space-between"

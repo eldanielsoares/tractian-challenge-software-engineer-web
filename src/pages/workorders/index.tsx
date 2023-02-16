@@ -16,7 +16,7 @@ const WorkordersPage: NextPage<WorkordersProps> = ({ workorders }) => {
     <>
       <Header />
       <Flex maxW={1480} px={8} mx="auto" direction={"column"}>
-        <Heading color="#214DB6" mt={6} fontWeight="semibold">
+        <Heading color="#214DB6" mt={"64px"} mb={3} fontWeight="semibold">
           Ordens de trabalho
         </Heading>
         <GridWorkorders workorders={workorders} />

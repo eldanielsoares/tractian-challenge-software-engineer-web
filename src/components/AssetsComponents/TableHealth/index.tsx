@@ -30,7 +30,7 @@ export const TableHealth: React.FC<tableHealthProps> = ({ data }) => {
 
   return (
     <Table bg={"#fff"} borderRadius="lg" boxShadow="md" mb={5}>
-      <Thead fontSize={"3xl"}>
+      <Thead fontSize={"4xl"}>
         <Tr>
           <Th px={["4", "4", "6"]}>Peça</Th>
 
@@ -45,7 +45,7 @@ export const TableHealth: React.FC<tableHealthProps> = ({ data }) => {
       </Thead>
       <Tbody>
         {data.slice(0, 5).map((item, key) => (
-          <Tr key={key} fontSize="sm">
+          <Tr key={key} fontSize="sm" color={"#8a8a8a"}>
             <Td px={["4", "4", "6"]}>
               <Text>PC{key}</Text>
             </Td>

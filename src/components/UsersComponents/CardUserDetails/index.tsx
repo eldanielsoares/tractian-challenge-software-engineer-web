@@ -3,12 +3,14 @@ import { User } from "@/@core/usecases/users/domain/entities/user";
 import {
   Card,
   CardBody,
+  Flex,
   HStack,
   Stack,
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { NameIcon } from "../../SharedComponents/NameIcon";
+import { ModalUpdateUser } from "../ModalUpdateUser";
 
 interface IUserProps {
   user: User;
@@ -32,7 +34,8 @@ export const CardUserDetails: React.FC<IUserProps> = ({
       <CardBody>
         <HStack spacing={"4"}>
           {isVisibleIcon && <NameIcon name={user.name} />}
-          <Stack>
+          <Stack w={"100%"}>
+            <ModalUpdateUser user={user} />
             <Text>
               Nome:{" "}
               <Text as={"span"} fontWeight="semibold">

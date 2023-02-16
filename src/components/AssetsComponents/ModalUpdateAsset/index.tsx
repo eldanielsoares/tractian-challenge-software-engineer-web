@@ -9,10 +9,9 @@ import {
   ModalBody,
   ModalFooter,
   useDisclosure,
-  Flex,
   Icon,
 } from "@chakra-ui/react";
-import { FiPlus } from "react-icons/fi";
+import { FiEdit } from "react-icons/fi";
 import { Input } from "@/components/SharedComponents/Input";
 
 interface Props {
@@ -20,32 +19,26 @@ interface Props {
   sensor: string;
 }
 
-export const ModalAddAsset: React.FC = () => {
-  const [name, setName] = useState("");
-  const [sensor, setSensor] = useState("");
+export const ModalUpdateAsset: React.FC<Props> = ({ name, sensor }) => {
+  const [inputName, setInputName] = useState(name);
+  const [inputSensor, setInputSensor] = useState(sensor);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   function close() {
     onClose();
-    setName("");
-    setSensor("");
+    setInputName("");
+    setInputSensor("");
   }
   return (
     <>
-      <Flex
-        w={"5"}
-        h="5"
-        p={2}
-        rounded={"full"}
-        bg="#214DB6"
-        alignItems={"center"}
-        justifyContent="center"
-        cursor={"pointer"}
-        justifySelf="flex-end"
+      <Icon
+        as={FiEdit}
+        color="#acacac"
+        ml={"4"}
         onClick={onOpen}
-      >
-        <Icon as={FiPlus} color="#f5f5f5" />
-      </Flex>
+        boxSize={"5"}
+        cursor="pointer"
+      />
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
@@ -53,16 +46,16 @@ export const ModalAddAsset: React.FC = () => {
           <ModalCloseButton />
           <ModalBody>
             <Input
-              value={name}
+              value={inputName}
               placeholder={"Digite o nome da máquina"}
-              onChange={(event) => setName(event.target.value)}
+              onChange={(event) => setInputName(event.target.value)}
               alignSelf={"center"}
               label="Nome da máquina"
             />
             <Input
-              value={sensor}
+              value={inputSensor}
               placeholder={"Digite o nome do sensor"}
-              onChange={(event) => setSensor(event.target.value)}
+              onChange={(event) => setInputSensor(event.target.value)}
               alignSelf={"center"}
               label={"Nome do sensor"}
             />

@@ -18,7 +18,13 @@ export const NavLink: React.FC<NavLinkProps> = ({
 }) => {
   return (
     <ActiveLink href={href} passHref shouldMathExactHref={shouldMatchUrl}>
-      <ChakraLink display={"flex"} alignItems="center" py={"1"} {...rest}>
+      <ChakraLink
+        display={"flex"}
+        alignItems="center"
+        py={"1"}
+        {...rest}
+        color="#f5f5f5"
+      >
         <Icon as={icon} fontSize="20" />
         <Text ml={"2"} fontWeight="medium">
           {children}

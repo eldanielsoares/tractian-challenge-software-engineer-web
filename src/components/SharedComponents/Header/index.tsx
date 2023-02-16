@@ -10,8 +10,6 @@ import { DrawerComponent } from "./DrawerComponent";
 
 export const Header: React.FC = () => {
   const { onOpen } = useSidebarDrawer();
-  const { overview } = useOverview();
-
   const isWideVersion = useBreakpointValue({
     base: true,
     lg: false,
@@ -49,12 +47,6 @@ export const Header: React.FC = () => {
               width={180}
               height={60}
             />
-            <Text mt={2} color="white">
-              Olá,{" "}
-              <Text as={"span"} fontWeight="semibold">
-                {overview.companies ? overview.companies[0].name : ""}
-              </Text>
-            </Text>
           </Link>
         </HStack>
         {!isWideVersion && <NavHeader />}

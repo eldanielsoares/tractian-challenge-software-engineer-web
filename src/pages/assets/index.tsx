@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Flex, Heading, Input, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import { GetServerSideProps, NextPage } from "next";
 import { container, Registry } from "@/@core/shared/container-registry";
 import { Assets } from "@/@core/usecases/assets/domain/entities/assets";
@@ -7,6 +7,7 @@ import { ListAssetsUsecase } from "@/@core/usecases/assets/application/list-asse
 import { GridAssets } from "@/components/AssetsComponents/GridAssets";
 import { EmptyList } from "@/components/SharedComponents/EmptyList";
 import { Header } from "@/components/SharedComponents/Header";
+import { Input } from "@/components/SharedComponents/Input";
 
 interface IListAssets {
   assets: Assets[];
@@ -25,22 +26,20 @@ const ListAssets: NextPage<IListAssets> = ({ assets }) => {
     <>
       <Header />
       <Flex maxW={1480} px={8} mx="auto" direction="column">
-        <Heading color="#214DB6" mt={6} fontWeight="semibold">
+        <Heading color="#214DB6" mt={"64px"} fontWeight="semibold">
           Máquinas
         </Heading>
 
-        <Text fontSize={"lg"}>
+        <Text fontSize={"lg"} mb={3}>
           Aqui estão todas as suas máquinas, clique para detalhes completos
         </Text>
 
         <Input
           value={input}
-          maxW={"400px"}
           placeholder={"Digite o nome de uma máquina"}
-          variant="outline"
           onChange={(event) => setInput(event.target.value)}
           alignSelf={"flex-end"}
-          mt="10"
+          label={""}
         />
         {filteredAssets.length === 0 && input && <EmptyList />}
         <GridAssets assets={assetsList} />

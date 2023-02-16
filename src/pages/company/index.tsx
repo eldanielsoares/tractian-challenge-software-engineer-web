@@ -44,7 +44,7 @@ const Company: NextPage<ICompanyProps> = ({ company }) => {
       <Header />
       <Flex maxW={1480} px={8} mx="auto" direction={"column"}>
         <Flex gap={4} alignItems="center">
-          <Heading color="#214DB6" mt={6} fontWeight="semibold">
+          <Heading color="#214DB6" mt={"64px"} fontWeight="semibold">
             Informações da empresa
           </Heading>
           <ModalUpdateCompany
@@ -65,29 +65,25 @@ const Company: NextPage<ICompanyProps> = ({ company }) => {
           w={"100%"}
           justifyContent={["center", "center", "center", "space-between"]}
           flexWrap={"wrap"}
-          gap={4}
           my={4}
         >
           <SimpleCard
-            title={"Total de máquinas"}
+            title={`Máquinas`}
             value={countAssets.toString()}
             modal={<ModalAddAsset />}
           />
 
           <SimpleCard
-            title={"Total de máquinas \n em parada"}
+            title={`Máquinas paradas`}
             value={countAssetsDownTime.toString()}
           />
 
           <SimpleCard
-            title={"Total de Serviços abertos"}
+            title={`Serviços abertos`}
             value={countWorkOrders.toString()}
           />
 
-          <SimpleCard
-            title={"Total de Colaboradores"}
-            value={countTeam.toString()}
-          />
+          <SimpleCard title={`Colaboradores`} value={countTeam.toString()} />
         </Flex>
       </Flex>
     </>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useOverview } from "@/context/OverviewContext";
 import {
   Button,
-  Input,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -11,8 +10,11 @@ import {
   ModalHeader,
   ModalOverlay,
   useDisclosure,
+  Image,
 } from "@chakra-ui/react";
+import { AiOutlineTeam } from "react-icons/ai";
 import { ButtonManagerUsers } from "./ButtonManagerUsers";
+import { Input } from "@/components/SharedComponents/Input";
 
 interface Props {
   ids: number[];
@@ -49,9 +51,14 @@ export const ModalDelegateWorkorders: React.FC<Props> = ({ ids }) => {
 
   return (
     <>
-      <Button w={"150px"} colorScheme={"blue"} onClick={onOpen}>
-        Responsáveis
-      </Button>
+      <Image
+        src="/images/users.svg"
+        alt="Responsáveis"
+        onClick={onOpen}
+        width={"60px"}
+        alignSelf="flex-end"
+        cursor={"pointer"}
+      />
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
@@ -74,20 +81,23 @@ export const ModalDelegateWorkorders: React.FC<Props> = ({ ids }) => {
                 onClick={() => {
                   setIsAdding(true);
                 }}
+                variant="link"
+                mt={2}
               >
                 Adicionar colaborador
               </Button>
             ) : (
               <>
-                <Input
-                  value={name}
-                  maxW={["auto", "400px"]}
-                  placeholder={"Digite o nome do usuário"}
-                  variant="outline"
-                  onChange={(event) => setName(event.target.value)}
-                  alignSelf={"center"}
-                  mt="4"
-                />
+                {filterUsers.length > 0 && (
+                  <Input
+                    value={name}
+                    placeholder={"Digite o nome do usuário"}
+                    onChange={(event) => setName(event.target.value)}
+                    alignSelf={"center"}
+                    my="4"
+                    label={""}
+                  />
+                )}
 
                 {(!name ? filterUsers : filteredSearch).map((i) => (
                   <ButtonManagerUsers
@@ -101,7 +111,7 @@ export const ModalDelegateWorkorders: React.FC<Props> = ({ ids }) => {
             )}
           </ModalBody>
 
-          <ModalFooter>
+          <ModalFooter mt={3}>
             <Button
               variant="ghost"
               mr={3}

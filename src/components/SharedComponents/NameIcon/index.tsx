@@ -1,11 +1,18 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Icon, Text } from "@chakra-ui/react";
+import { FiPlus } from "react-icons/fi";
 
 interface NameIcon {
   name: string;
+  isIcon?: boolean;
+  onClick?: () => void;
 }
 
-export const NameIcon: React.FC<NameIcon> = ({ name }) => {
+export const NameIcon: React.FC<NameIcon> = ({
+  name,
+  onClick = () => {},
+  isIcon = false,
+}) => {
   return (
     <Box
       w={"60px"}
@@ -16,10 +23,15 @@ export const NameIcon: React.FC<NameIcon> = ({ name }) => {
       flexDirection={"column"}
       alignItems={"center"}
       justifyContent={"center"}
+      onClick={onClick}
     >
-      <Text color={"white"} fontWeight="bold" fontSize={"lg"}>
-        {name[0].toUpperCase()}
-      </Text>
+      {isIcon ? (
+        <Icon as={FiPlus} color={"#f5f5f5"} boxSize={"10"} />
+      ) : (
+        <Text color={"white"} fontWeight="bold" fontSize={"lg"}>
+          {name[0].toUpperCase()}
+        </Text>
+      )}
     </Box>
   );
 };

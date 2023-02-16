@@ -27,7 +27,7 @@ const UserById: NextPage<IUSerProps> = ({ user }) => {
     <>
       <Header />
       <Flex maxW={1480} px={8} mx="auto" direction={"column"}>
-        <Heading color="#214DB6" mt={6} fontWeight="semibold">
+        <Heading color="#214DB6" mt={"64px"} fontWeight="semibold">
           Colaborador
         </Heading>
 

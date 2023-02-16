@@ -27,18 +27,18 @@ export const GridWorkorders: React.FC<GridWorkOrdersProps> = ({
       templateColumns={[
         "repeat(1, 1fr)",
         "repeat(2, 1fr)",
+        "repeat(2, 1fr)",
         "repeat(3, 1fr)",
-        "repeat(4, 1fr)",
-        "repeat(5, 1fr)",
+        "repeat(3, 1fr)",
       ]}
-      gap={8}
+      gap={4}
       rowGap={6}
       flexWrap={"nowrap"}
       my={"10"}
       alignSelf="center"
     >
       {workorders.map((wo, key) => (
-        <GridItem w="100%" minW={"130px"} key={key}>
+        <GridItem w="100%" key={key}>
           <CardWorkorders
             workorders={wo || []}
             image={getAsset(wo.id)?.image || ""}

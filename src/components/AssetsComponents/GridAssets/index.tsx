@@ -19,7 +19,7 @@ export const GridAssets: React.FC<GridProps> = ({ assets = [] }) => {
         "repeat(4, 1fr)",
         "repeat(5, 1fr)",
       ]}
-      gap={8}
+      gap={4}
       rowGap={6}
       flexWrap={"wrap"}
       my={"10"}
