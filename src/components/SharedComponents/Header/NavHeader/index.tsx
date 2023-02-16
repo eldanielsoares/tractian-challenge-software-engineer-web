@@ -17,7 +17,7 @@ export const NavHeader: React.FC = () => {
       flexDirection={["column", "column", "column", "row"]}
     >
       <NavLink icon={FiAirplay} href="/" shouldMatchUrl={true}>
-        Dashboard
+        Visão geral
       </NavLink>
 
       <NavLink icon={FiTool} href="/assets">
