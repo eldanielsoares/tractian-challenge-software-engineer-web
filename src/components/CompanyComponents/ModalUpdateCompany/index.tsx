@@ -32,7 +32,7 @@ export const ModalUpdateCompany: React.FC<Props> = ({ name }) => {
       <Icon
         as={FiEdit}
         color={"#d9d9d9"}
-        boxSize={"5"}
+        boxSize={"6"}
         alignSelf="flex-end"
         onClick={onOpen}
         cursor="pointer"
